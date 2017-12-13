@@ -22,9 +22,9 @@ player = {
 }
 
 enemy1 = {
-'HP': 100,
-'attack': 100,
-'defense': 100,
+'HP': 70,
+'attack': 60,
+'defense': 60,
 'name': 'Void Knight, Ibrixal'
 }
 
@@ -51,8 +51,8 @@ enemy4 = {
 
 enemy5 = {
 'HP': 100,
-'attack': 100,
-'defense': 100,
+'attack': 70,
+'defense': 70,
 'name': 'Astral Demon Drake'
 }
 player['name'] = input('Type Name: \n')
@@ -129,7 +129,6 @@ def fight(oppo1, oppo2):
         if oppo1['HP'] <= 0:
             print(oppo2['name'],"defeats",oppo1['name'])
             game_over(oppo1)
-
     print(oppo1['name'], 'HP:', oppo1['HP'])
     print(oppo2['name'], 'HP:', oppo2['HP'])
 
@@ -179,6 +178,8 @@ def main():
     The ship controls unlocks defensive measures and releases armaments. You get ready to fight...\n\n')
     input('Press Enter to continue')
     encounter(player, enemy5)
+    print('The Drake takes a cannon shot to the face and falls, drifting into deep space.')
+    input('Press Enter to continue')
     if player['HP'] <= 0:
         game_over(player)
     else:
